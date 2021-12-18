@@ -1,3 +1,7 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+}
 *{
     margin:0;
     padding:0;
@@ -16,6 +20,8 @@ ul{
 }
 li{
     list-style:none;
+    padding:0 auto;
+    margin:0 auto;
 }
 a{
     text-decoration: none;
@@ -40,8 +46,8 @@ a{
 .scroll_btn:hover{
     font-size:2.55rem;
     text-shadow: 0 5px 15px black;
-    opacity:1;
     bottom:1.2rem;
+    opacity:1;
     transition:0.5s;
 }
 .scroll_btn:active{
@@ -58,7 +64,7 @@ a{
     align-items:center;
     height:2.625rem;
     padding-left:1.5rem;
-    z-index:999;
+    z-index: 999;
 }
 .hamb{
     display:none;
@@ -95,50 +101,135 @@ a{
     color:rgb(133, 133, 133);
     transition:0.5s;
 }
-
 .section div{
-    display:flex;
+    display: flex;
 }
-img{
-    width:100%;
-    float:left;
-    margin-bottom: 50px;
+.section{
+    display: none;
 }
-a img{
-    transition: 0.25s;
-}
-a img:active{
-    transition:0.25s;
-    opacity: 60%;
-}
-.block{
-    display:flex;
-    width:fit-content;
-    margin:0 auto;
-    margin-right: 40px;
-}
-.article{
-    width:40%;
+h1{
+    color: #f8f8f8;
+    font-weight: normal;
+    font-size:96px;
     position: absolute;
-    right:20px;
-    z-index:0
-}
-.head{
-    font-weight:200;
-    font-size:5vw;
-    margin:30px 0;
+    margin-top:1.25rem;
+    right:2.2rem;
     text-align: right;
 }
-.text{
-    text-align: right;
-    margin:0;
-    margin-top:10px;
-    font-size:2.5vw;/*шрифт подстраивается под размер дока*/
+a{
+    color:#f8f8f8;
+    transition:0.5s;
 }
+a:hover{
+    transition:0.5s;
+    opacity:0.7;
+}
+.aleft{
+    text-align:left;
+    left:2.2rem;
+}
+
+/*СЛАЙДЕР*/
+.slider{
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 130px;
+    margin: auto;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height:calc(100vh - 2.625rem);/*высота окна минус высота хедера*/
+    margin-bottom: -17vh;
+}
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    height:6.5vh;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover, .slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.slideText {
+    position: absolute;
+    color: #f8f8f8;
+    font-size: 90px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    margin-left: 10vh;
+    top: 5vh;
+    text-align: center;
+}
+.slider-dots{
+    position: relative;
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 0.5vh;
+    width: 10vh;
+    margin: 0 2vh;
+    background-color: #dadada;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .slider-dots_item:hover {
+    background-color: rgb(124, 124, 124);
+}
+/* Анимация слайдов */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .2
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .2
+    }
+    to {
+        opacity: 1
+    }
+}
+
 
 /*RESPONSIVE*/
 /*992px-1200px*/
 @media screen and (max-width:1200px){
+    .section_slider{
+        display: none;
+    }
+    .section{
+        display:block;
+    }
     .nav__menu{
         position: fixed;
         flex-direction: column;
@@ -152,7 +243,6 @@ a img:active{
     .nav__menu.active{
         left:0;
         background-color: #f8f8f8;
-        z-index: 2;
     }
     .nav__item{
         margin:2.5rem 0
@@ -178,14 +268,31 @@ a img:active{
         transform:translateY(-8px) rotate(-45deg);
     }
 
+    img{
+        float: left;
+        width:100%;
+    }
+    h1{
+        font-size:70px;
+        margin-top:1rem;
+        right:1.5rem;
+    }
+    .aleft{
+        left:1.5rem;
+    }
 }
 /*768px-992px*/
 @media screen and (max-width:992px){
     .navbar{
         justify-content: space-evenly;
     }
-    .head{
-        margin:15px 0;
+    h1{
+        font-size:50px;
+        margin-top:0.5rem;
+        right:0.8rem;
+    }
+    .aleft{
+        left:0.8rem;
     }
     .scroll_btn{
         bottom:0.3rem;
@@ -194,9 +301,6 @@ a img:active{
 }
 /*576px-768px*/
 @media screen and (max-width:768px){
-    .head{
-        margin:5px 0;
-    }
     .scroll_btn{
         font-size: 1.5rem;
     }
@@ -220,6 +324,15 @@ a img:active{
     }
     .navbar{
         padding: 0 10px;
+    }
+    h1{
+        font-size:20px;
+        font-weight: bold;
+        margin-top:0.5rem;
+        right:0.5rem;
+    }
+    .aleft{
+        left:0.5rem;
     }
     .scroll_btn{
         font-size:1rem;
