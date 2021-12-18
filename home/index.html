@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Я сниму про тебя фильм!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet"type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <nav class="navbar">
+                <a href="#" class="nav__logo">
+                    Олег Басалай
+                </a>
+                <ul class="nav__menu">
+                    <li class="nav__item">
+                        <a href="../about/about.html" class="nav__link">
+                            Кто я?
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../portfolio/portfolio.html" class="nav__link">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../contacts/contacts.html" class="nav__link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+        </nav>
+    </header>
+    <!--кнопка скролла вверх-->
+    <div class="scroll_btn" onclick="scrollTopTop">
+        <i class="fas fa-caret-square-up"></i>
+    </div>
+    <section class="section_slider">
+        <div class="slider">
+            <div class="item">
+                <img src="img/1.png">
+                <div class="slideText">
+                    <a href="../photo portfolio/Фото эвелина/photo_7.html">Эвелина</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/2.png">
+                <div class="slideText">
+                    <a href="../photo portfolio/Фото волга/photo_1.html">Волга</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/3.png">
+                <div class="slideText" style="text-align: left;">
+                    <a href="../photo portfolio/Фото реклама/photo_6.html">Коммерческая<br>
+                        съёмка</a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/4.png">
+                <div class="slideText" style="text-align: left;">
+                    <a href="../photo portfolio/Фото мотоцикл/photo_2.html">Мотоцикл<br>
+                        К-750</a>
+                </div>
+            </div>
+            <!--кнопки слайдера-->
+            <a class="prev" onclick="minusSlide()">&#10094;</a>
+            <a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+        <br>
+
+        <div class="slider-dots">
+            <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+            <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+            <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+            <span class="slider-dots_item" onclick="currentSlide(4)"></span> 
+        </div>
+
+    </section>
+
+    <section class="section">
+        <div>
+            <h1><a href="../photo portfolio/Фото эвелина/photo_7.html">Эвелина</a></h1>
+            <img src="img/1.png" alt="Эвелина" class="first">
+        </div>
+        <div>
+            <h1 class="aleft"><a href="../photo portfolio/Фото волга/photo_1.html">Волга</a></h1>
+            <img src="img/2.png" alt="Волга" class="second">
+        </div>
+        <div>
+            <h1>
+                <a href="../photo portfolio/Фото реклама/photo_6.html">Коммерческая<br>
+                съёмка</a>
+            </h1>
+            <img src="img/3.png" alt="Коммерчекая съёмка" class="third">
+        </div>
+        <div>
+            <h1 class="aleft">
+                <a href="../photo portfolio/Фото мотоцикл/photo_2.html">Мотоцикл<br>
+                К-750</a>
+            </h1>
+            <img src="img/4.png" alt="Мотоцикл К-750" class="fourth">
+        </div>
+    </section>
+
+    <script type="text/javascript" src="hamb.js"></script>
+    <script defer src="scroll_btn.js"></script> <!--кнопка скролла вверх-->
+    <script src="slider.js"></script><!--слайдер-->
+
+</body>
+</html>
