@@ -1,0 +1,19 @@
+TEXT{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4vw;
+    color: #00000078;
+    text-align: right;
+}
+
+DEV,
+FIO,
+GROUP,
+YEAR{
+    display: block;
+    margin: 0 auto;
+    max-height: 20%;
+}
+
+YEAR{
+    font-size: 5vw;
+}
