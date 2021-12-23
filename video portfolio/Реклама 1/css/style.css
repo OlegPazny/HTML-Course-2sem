@@ -153,6 +153,9 @@ iframe{
     .hamb.active .bar:nth-child(3){
         transform:translateY(-8px) rotate(-45deg);
     }
+    body.noscroll{
+        overflow: hidden;
+    }
 
     .article{
         margin: auto;

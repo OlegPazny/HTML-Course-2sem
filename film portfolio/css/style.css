@@ -176,6 +176,9 @@ a img:active{
     .hamb.active .bar:nth-child(3){
         transform:translateY(-8px) rotate(-45deg);
     }
+    body.noscroll{
+        overflow: hidden;
+    }
     .head{
         margin:20px 0;
     }

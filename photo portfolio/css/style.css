@@ -154,6 +154,9 @@ a img:active{
         background-color: #f8f8f8;
         z-index: 2;
     }
+    body.noscroll{
+        overflow: hidden;
+    }
     .nav__item{
         margin:2.5rem 0
     }

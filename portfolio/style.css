@@ -135,6 +135,9 @@ a img:hover{
     .hamb.active .bar:nth-child(3){
         transform:translateY(-8px) rotate(-45deg);
     }
+    body.noscroll{
+        overflow: hidden;
+    }
     .container-menu{
         width:950px;
     }

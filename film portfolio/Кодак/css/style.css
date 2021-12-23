@@ -62,6 +62,7 @@ a{
 .hamb{
     display:none;
 }
+/*элементы кнопки гамбургера*/
 .bar{
     display:block;
     width:25px;
@@ -189,6 +190,9 @@ h1:hover{
     }
     .hamb.active .bar:nth-child(3){
         transform:translateY(-8px) rotate(-45deg);
+    }
+    body.noscroll{/*блокировка скролла при открытом гамбургере*/
+        overflow: hidden;
     }
     .head{
         margin:20px 0;
